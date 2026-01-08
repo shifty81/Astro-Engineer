@@ -38,9 +38,8 @@ def log(message, level="log"):
 
 def ensure_directory_exists(path):
     """Create directory if it doesn't exist"""
-    editor_asset_lib = unreal.EditorAssetLibrary()
-    if not editor_asset_lib.does_directory_exist(path):
-        result = editor_asset_lib.make_directory(path)
+    if not unreal.EditorAssetLibrary.does_directory_exist(path):
+        result = unreal.EditorAssetLibrary.make_directory(path)
         if result:
             log(f"Created directory: {path}")
         else:
@@ -55,18 +54,16 @@ def create_input_action(name, value_type, description=""):
     """Create an Input Action asset"""
     asset_path = f"{INPUT_PATH}/{name}"
     
-    editor_asset_lib = unreal.EditorAssetLibrary()
-    if editor_asset_lib.does_asset_exist(asset_path):
+    if unreal.EditorAssetLibrary.does_asset_exist(asset_path):
         log(f"Input Action already exists: {name}")
         return unreal.load_asset(asset_path)
     
-    # Create Input Action
-    factory = unreal.InputActionFactory()
+    # Create Input Action - no factory needed in UE 5.7
     asset = unreal.AssetToolsHelpers.get_asset_tools().create_asset(
         asset_name=name,
         package_path=INPUT_PATH,
         asset_class=unreal.InputAction,
-        factory=factory
+        factory=None
     )
     
     if asset:
@@ -84,18 +81,16 @@ def create_input_mapping_context(name):
     """Create an Input Mapping Context asset"""
     asset_path = f"{INPUT_PATH}/{name}"
     
-    editor_asset_lib = unreal.EditorAssetLibrary()
-    if editor_asset_lib.does_asset_exist(asset_path):
+    if unreal.EditorAssetLibrary.does_asset_exist(asset_path):
         log(f"Input Mapping Context already exists: {name}")
         return unreal.load_asset(asset_path)
     
-    # Create Input Mapping Context
-    factory = unreal.InputMappingContextFactory()
+    # Create Input Mapping Context - no factory needed in UE 5.7
     asset = unreal.AssetToolsHelpers.get_asset_tools().create_asset(
         asset_name=name,
         package_path=INPUT_PATH,
         asset_class=unreal.InputMappingContext,
-        factory=factory
+        factory=None
     )
     
     if asset:
@@ -113,8 +108,7 @@ def create_player_character_blueprint():
     bp_name = "BP_AstroPlayerCharacter"
     full_path = f"{bp_path}/{bp_name}"
     
-    editor_asset_lib = unreal.EditorAssetLibrary()
-    if editor_asset_lib.does_asset_exist(full_path):
+    if unreal.EditorAssetLibrary.does_asset_exist(full_path):
         log(f"Blueprint already exists: {bp_name}")
         return unreal.load_asset(full_path)
     
@@ -147,8 +141,7 @@ def create_game_mode_blueprint():
     bp_name = "BP_AstroGameMode"
     full_path = f"{bp_path}/{bp_name}"
     
-    editor_asset_lib = unreal.EditorAssetLibrary()
-    if editor_asset_lib.does_asset_exist(full_path):
+    if unreal.EditorAssetLibrary.does_asset_exist(full_path):
         log(f"Blueprint already exists: {bp_name}")
         return unreal.load_asset(full_path)
     
