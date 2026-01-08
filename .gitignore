@@ -25,6 +25,12 @@ Script/
 *.so
 *.obj
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
 # Precompiled Headers
 *.gch
 *.pch
