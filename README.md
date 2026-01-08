@@ -330,6 +330,13 @@ Comprehensive documentation is available in the `/Docs` folder:
 - **DEVELOPMENT_GUIDE.md** - Coding standards, workflow, and testing
 - **ASSET_GUIDELINES.md** - Content creation standards and best practices
 
+### Game Design & Implementation
+- **GAME_REFERENCES_RESOURCES.md** - Comprehensive guide to similar games, tutorials, and resources for space game mechanics
+- **GAME_PROGRESSION_GUIDE.md** - Complete player progression from on-foot gameplay to galactic exploration
+- **ORBITAL_MECHANICS_GUIDE.md** - Detailed guide for implementing launch systems, orbital flight, and space navigation
+- **SPACE_STATION_GUIDE.md** - Instructions for EVA operations, spacewalking, and orbital base construction
+- **SHIP_PROGRESSION_GUIDE.md** - Ship design, upgrades, and progression from starter rockets to capital ships
+
 ## Contributing
 
 See DEVELOPMENT_GUIDE.md for:
