@@ -1,0 +1,106 @@
+# Unreal Engine Files
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Script/
+.vs/
+.vscode/
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.out
+*.app
+
+# Unreal Engine specific
+*.uasset
+*.umap
+*_BuiltData.uasset
+
+# Exception for starter content
+!StarterContent/**/*.uasset
+!StarterContent/**/*.umap
+
+# Crash logs
+*.log
+
+# Local configuration
+*.ini.user
+*.ini.backup
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE
+*.swp
+*.swo
+*~
+.idea/
+
+# Rider
+.idea/
+.idea_modules/
+*.iml
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Build artifacts
+Build/Linux/
+Build/Mac/
+Build/Windows/
+
+# Plugins (only exclude built versions)
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# Content that's not source controlled
+Content/Collections/
+Content/Developers/
+Content/StarterContent/
+
+# Ignore Content folder completely for now (will be created in editor)
+# Remove this line when you start adding content
+Content/
+
+# Documentation build artifacts
+Docs/**/*.html
+Docs/**/*.pdf
