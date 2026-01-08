@@ -138,6 +138,45 @@ When the editor opens for the first time:
 
 ## Troubleshooting
 
+### Issue: "AstroEngineerEditor modifies the values of properties" Build Error
+**Error Message**:
+```
+AstroEngineerEditor modifies the values of properties: [ UndefinedIdentifierWarningLevel: Off != Error ]. 
+This is not allowed, as AstroEngineerEditor has build products in common with UnrealEditor.
+```
+
+**Solution**: This error occurs when build settings are outdated. The project has been updated to use BuildSettingsVersion.V6 which includes the correct settings. If you encounter this:
+1. Ensure you have the latest version from GitHub
+2. Regenerate project files (right-click .uproject > Generate Visual Studio project files)
+3. Clean and rebuild the solution in Visual Studio
+4. Verify `Source/AstroEngineerEditor.Target.cs` contains:
+   - `DefaultBuildSettings = BuildSettingsVersion.V6;`
+   - `BuildEnvironment = TargetBuildEnvironment.Unique;`
+
+### Issue: "Using backward-compatible build settings" Warning
+**Warning Message**:
+```
+Using backward-compatible build settings. The latest version of UE sets the following values by default...
+Suppress this message by setting 'DefaultBuildSettings = BuildSettingsVersion.V6;'
+```
+
+**Solution**: This is resolved in the latest version. Ensure both Target.cs files use V6:
+- Check `Source/AstroEngineer.Target.cs`
+- Check `Source/AstroEngineerEditor.Target.cs`
+- Both should have `DefaultBuildSettings = BuildSettingsVersion.V6;`
+
+### Issue: No .sln file exists
+**Problem**: Cannot find `AstroEngineer.sln` to open in Visual Studio
+
+**Solution**: 
+1. The solution file must be generated before first use
+2. Right-click `AstroEngineer.uproject` and select "Generate Visual Studio project files"
+3. If right-click option is missing, run from command prompt:
+   ```cmd
+   "C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat" -project="%CD%\AstroEngineer.uproject" -game -engine
+   ```
+4. After generation completes, you should see `AstroEngineer.sln` in the project root
+
 ### Issue: "Could not find NetFxSDK install dir"
 **Solution**: Install .NET Framework SDK from Visual Studio Installer
 
