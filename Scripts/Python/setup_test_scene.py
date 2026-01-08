@@ -93,7 +93,9 @@ def setup_lighting():
         light_component = directional_light.get_component_by_class(unreal.DirectionalLightComponent)
         if light_component:
             light_component.set_editor_property("intensity", 10.0)
-            light_component.set_editor_property("light_color", unreal.LinearColor(1.0, 0.95, 0.9, 1.0))
+            # Convert LinearColor to Color for the light_color property
+            linear_color = unreal.LinearColor(1.0, 0.95, 0.9, 1.0)
+            light_component.set_editor_property("light_color", linear_color.to_color())
         log("Created Directional Light (Sun)")
     
     # Add Sky Light
@@ -307,9 +309,8 @@ def main():
         log("")
         
         # Ensure Maps directory exists
-        editor_asset_lib = unreal.EditorAssetLibrary()
-        if not editor_asset_lib.does_directory_exist(MAPS_PATH):
-            editor_asset_lib.make_directory(MAPS_PATH)
+        if not unreal.EditorAssetLibrary.does_directory_exist(MAPS_PATH):
+            unreal.EditorAssetLibrary.make_directory(MAPS_PATH)
             log(f"Created directory: {MAPS_PATH}")
         
         # Create new level
