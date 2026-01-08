@@ -2,7 +2,9 @@
 
 ## 🚀 Quick Start
 
-**New to the project?** See **[QUICKSTART.md](QUICKSTART.md)** to set up the FPS template in under 5 minutes using Python automation!
+**New to the project?** See **[QUICKSTART.md](QUICKSTART.md)** to set up the FPS template in under 10 minutes using Python automation!
+
+**Looking for the .sln file?** See **[GENERATING_SOLUTION_FILE.md](GENERATING_SOLUTION_FILE.md)** - the solution file is NOT in the repository and must be generated first!
 
 ## Overview
 

@@ -15,6 +15,9 @@ cd Astro-Engineer
 ```
 
 #### 0.2 Generate Visual Studio Project Files
+
+⚠️ **IMPORTANT**: The `.sln` file is **NOT** in the repository - you must generate it first!
+
 **On Windows:**
 1. Right-click on `AstroEngineer.uproject` in Windows Explorer
 2. Select **"Generate Visual Studio project files"**
@@ -25,6 +28,8 @@ cd Astro-Engineer
 1. Locate your UE 5.7 installation (e.g., `C:\Program Files\Epic Games\UE_5.7`)
 2. Navigate to `Engine\Build\BatchFiles`
 3. Run: `GenerateProjectFiles.bat -project="C:\path\to\AstroEngineer.uproject" -game -engine`
+
+📘 **See [GENERATING_SOLUTION_FILE.md](GENERATING_SOLUTION_FILE.md) for detailed instructions and troubleshooting**
 
 #### 0.3 Build the C++ Code
 1. Open `AstroEngineer.sln` in Visual Studio 2022
