@@ -96,7 +96,10 @@ AstroEngineer/
     ├── SETUP.md
     ├── ARCHITECTURE.md
     ├── DEVELOPMENT_GUIDE.md
-    └── ASSET_GUIDELINES.md
+    ├── ASSET_GUIDELINES.md
+    ├── BLUEPRINT_QUICKSTART.md
+    ├── FPS_TEMPLATE_IMPLEMENTATION.md
+    └── SCENE_SETUP_GUIDE.md
 ```
 
 ## Core Systems
@@ -173,7 +176,10 @@ AstroEngineer/
    - Wait for initial compile and shader compilation
 
 5. **Create Content**
-   - See ASSET_GUIDELINES.md for asset creation
+   - See **FPS_TEMPLATE_IMPLEMENTATION.md** for player character setup
+   - See **SCENE_SETUP_GUIDE.md** for creating game levels
+   - See **BLUEPRINT_QUICKSTART.md** for creating Blueprints and UI
+   - See **ASSET_GUIDELINES.md** for asset creation standards
    - Import/create meshes for ship modules
    - Design UI widgets for interface system
    - Create materials and textures
@@ -262,6 +268,21 @@ C++ classes designed for Blueprint extension:
 - Ship modules use attachment system for hierarchy
 - Event delegates prevent constant polling
 - Configurable limits prevent memory issues
+
+## Documentation
+
+Comprehensive documentation is available in the `/Docs` folder:
+
+### Getting Started
+- **SETUP.md** - Installation and initial project setup
+- **FPS_TEMPLATE_IMPLEMENTATION.md** - Detailed guide for implementing the First Person template
+- **SCENE_SETUP_GUIDE.md** - Complete guide for creating and modifying game scenes/levels
+
+### Development
+- **BLUEPRINT_QUICKSTART.md** - Step-by-step guide for creating Blueprint content
+- **ARCHITECTURE.md** - Technical architecture and system design
+- **DEVELOPMENT_GUIDE.md** - Coding standards, workflow, and testing
+- **ASSET_GUIDELINES.md** - Content creation standards and best practices
 
 ## Contributing
 
