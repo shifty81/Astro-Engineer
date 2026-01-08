@@ -1,14 +1,50 @@
 # Quick Start Guide - Astro Engineer
 
-## 🚀 Fastest Way to Get Started (5 minutes)
+## 🚀 Fastest Way to Get Started (10 minutes)
 
 This is the quickest path to get Astro Engineer's FPS template up and running.
 
-### Prerequisites Checklist
+### Step 0: Initial Setup (5 minutes) - **IMPORTANT: DO THIS FIRST!**
+
+Before you can use the Python automation scripts, you need to set up the C++ project:
+
+#### 0.1 Clone the Repository
+```bash
+git clone https://github.com/shifty81/Astro-Engineer.git
+cd Astro-Engineer
+```
+
+#### 0.2 Generate Visual Studio Project Files
+**On Windows:**
+1. Right-click on `AstroEngineer.uproject` in Windows Explorer
+2. Select **"Generate Visual Studio project files"**
+3. Wait for the process to complete
+4. You should now see `AstroEngineer.sln` in the project folder
+
+**Alternative method (if right-click option is missing):**
+1. Locate your UE 5.7 installation (e.g., `C:\Program Files\Epic Games\UE_5.7`)
+2. Navigate to `Engine\Build\BatchFiles`
+3. Run: `GenerateProjectFiles.bat -project="C:\path\to\AstroEngineer.uproject" -game -engine`
+
+#### 0.3 Build the C++ Code
+1. Open `AstroEngineer.sln` in Visual Studio 2022
+2. Set build configuration to **"Development Editor"** and platform to **"Win64"**
+3. Build the solution: `Build` → `Build Solution` (or press Ctrl+Shift+B)
+4. Wait for compilation to complete (first build may take 5-15 minutes)
+5. Ensure there are **no build errors** before proceeding
+
+#### 0.4 Launch Unreal Editor
+1. Double-click `AstroEngineer.uproject`
+2. If prompted to rebuild, click **"Yes"**
+3. Wait for the editor to load and shaders to compile
+
+### Prerequisites Checklist (Verify before continuing)
 
 - [ ] Unreal Engine 5.7 installed
-- [ ] Project cloned and C++ code compiled
-- [ ] Project opened in Unreal Editor
+- [ ] Project cloned from GitHub
+- [ ] Visual Studio project files generated (.sln file exists)
+- [ ] C++ code compiled successfully in Visual Studio
+- [ ] Project opened in Unreal Editor without errors
 
 ### Step 1: Enable Python (30 seconds)
 

@@ -173,16 +173,32 @@ AstroEngineer/
    ```
 
 2. **Generate Project Files**
-   - Right-click on `AstroEngineer.uproject`
+   
+   **Method 1 - Right-click (Recommended)**:
+   - Right-click on `AstroEngineer.uproject` in Windows Explorer
    - Select "Generate Visual Studio project files"
+   - Wait for the process to complete
+   - You should now see `AstroEngineer.sln` in the project folder
+   
+   **Method 2 - Command Line**:
+   - If the right-click option is not available, run from command prompt:
+   ```cmd
+   "C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat" -project="%CD%\AstroEngineer.uproject" -game -engine
+   ```
+   - Replace the UE path if your installation is in a different location
 
-3. **Open in Visual Studio**
-   - Open `AstroEngineer.sln`
-   - Build the solution (Build > Build Solution)
+3. **Build the C++ Code**
+   - Open `AstroEngineer.sln` in Visual Studio 2022
+   - Set configuration to **"Development Editor"** and platform to **"Win64"**
+   - Build the solution (Build > Build Solution or Ctrl+Shift+B)
+   - Wait for compilation to complete (first build may take 5-15 minutes)
+   - **Important**: Ensure there are no build errors before proceeding
 
 4. **Launch Editor**
    - Double-click `AstroEngineer.uproject`
+   - If prompted to rebuild modules, click "Yes"
    - Wait for initial compile and shader compilation
+   - The editor should now open successfully
 
 5. **Create Content**
    
