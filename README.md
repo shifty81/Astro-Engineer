@@ -92,6 +92,10 @@ AstroEngineer/
 │   ├── Materials/
 │   ├── Meshes/
 │   └── Textures/
+├── Scripts/                         # Automation scripts
+│   └── Python/
+│       ├── setup_fps_template.py
+│       └── setup_test_scene.py
 └── Docs/                           # Documentation
     ├── SETUP.md
     ├── ARCHITECTURE.md
@@ -99,7 +103,8 @@ AstroEngineer/
     ├── ASSET_GUIDELINES.md
     ├── BLUEPRINT_QUICKSTART.md
     ├── FPS_TEMPLATE_IMPLEMENTATION.md
-    └── SCENE_SETUP_GUIDE.md
+    ├── SCENE_SETUP_GUIDE.md
+    └── PYTHON_AUTOMATION_GUIDE.md
 ```
 
 ## Core Systems
@@ -176,10 +181,20 @@ AstroEngineer/
    - Wait for initial compile and shader compilation
 
 5. **Create Content**
+   
+   **Quick Setup with Python (Recommended)**:
+   - Enable Python Editor Script Plugin in Unreal Editor
+   - Run `Scripts/Python/setup_fps_template.py` to create FPS assets
+   - Run `Scripts/Python/setup_test_scene.py` to create test level
+   - See **PYTHON_AUTOMATION_GUIDE.md** for detailed instructions
+   
+   **Manual Setup**:
    - See **FPS_TEMPLATE_IMPLEMENTATION.md** for player character setup
    - See **SCENE_SETUP_GUIDE.md** for creating game levels
    - See **BLUEPRINT_QUICKSTART.md** for creating Blueprints and UI
    - See **ASSET_GUIDELINES.md** for asset creation standards
+   
+   **Content Creation**:
    - Import/create meshes for ship modules
    - Design UI widgets for interface system
    - Create materials and textures
@@ -240,6 +255,14 @@ AstroEngineer/
 
 ## Technical Details
 
+### Python Automation Support
+The project includes Python scripts for automated setup:
+- One-click FPS template asset creation
+- Automated test scene generation
+- Reduces manual setup time from hours to minutes
+- Customizable scripts for project-specific needs
+- See **PYTHON_AUTOMATION_GUIDE.md** for details
+
 ### Enhanced Input System
 The project uses UE5's Enhanced Input plugin for flexible control mapping:
 - Input Actions defined in C++
@@ -275,6 +298,7 @@ Comprehensive documentation is available in the `/Docs` folder:
 
 ### Getting Started
 - **SETUP.md** - Installation and initial project setup
+- **PYTHON_AUTOMATION_GUIDE.md** - Automate setup with Python scripts (fastest method)
 - **FPS_TEMPLATE_IMPLEMENTATION.md** - Detailed guide for implementing the First Person template
 - **SCENE_SETUP_GUIDE.md** - Complete guide for creating and modifying game scenes/levels
 
