@@ -151,7 +151,6 @@ This is not allowed, as AstroEngineerEditor has build products in common with Un
 3. Clean and rebuild the solution in Visual Studio
 4. Verify `Source/AstroEngineerEditor.Target.cs` contains:
    - `DefaultBuildSettings = BuildSettingsVersion.V6;`
-   - `BuildEnvironment = TargetBuildEnvironment.Unique;`
 
 ### Issue: "Using backward-compatible build settings" Warning
 **Warning Message**:

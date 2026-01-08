@@ -13,9 +13,10 @@ Astro Engineer is a first-person space exploration and ship-building game built 
 ## Key Features
 
 ### 1. First Person Gameplay
-- Built on Unreal Engine 5.7 First Person Template
+- Built on Unreal Engine 5.7 First Person mechanics
 - Enhanced Input System for modern control schemes
 - Smooth camera controls and movement
+- **NEW**: Add Epic's official FPS Template content - see **[Docs/ADDING_FPS_TEMPLATE.md](Docs/ADDING_FPS_TEMPLATE.md)**
 
 ### 2. Unique Backpack Interface System
 - Press a key to take off backpack and kneel down
@@ -188,6 +189,8 @@ AstroEngineer/
    "C:\Program Files\Epic Games\UE_5.7\Engine\Build\BatchFiles\GenerateProjectFiles.bat" -project="%CD%\AstroEngineer.uproject" -game -engine
    ```
    - Replace the UE path if your installation is in a different location
+   
+   **Note**: If you encounter the error "Targets with a unique build environment cannot be built with an installed engine", this has been fixed in the latest version. Simply pull the latest changes and regenerate project files.
 
 3. **Build the C++ Code**
    - Open `AstroEngineer.sln` in Visual Studio 2022
@@ -202,24 +205,26 @@ AstroEngineer/
    - Wait for initial compile and shader compilation
    - The editor should now open successfully
 
-5. **Create Content**
+5. **Add FPS Template Content (Choose One Method)**
    
-   **Quick Setup with Python (Recommended)**:
+   **Method A: Use Epic's Official FPS Template** (Recommended):
+   - In Unreal Editor, go to **Edit** → **"Add Feature or Content Pack..."**
+   - Select **"First Person"** template from Feature Packs
+   - Click **"Add to Project"**
+   - Wait for import to complete (2-10 minutes)
+   - **See [Docs/ADDING_FPS_TEMPLATE.md](Docs/ADDING_FPS_TEMPLATE.md) for detailed step-by-step instructions**
+   
+   **Method B: Quick Setup with Python Automation**:
    - Enable Python Editor Script Plugin in Unreal Editor
    - Run `Scripts/Python/setup_fps_template.py` to create FPS assets
    - Run `Scripts/Python/setup_test_scene.py` to create test level
    - See **PYTHON_AUTOMATION_GUIDE.md** for detailed instructions
    
-   **Manual Setup**:
+   **Method C: Manual Setup**:
    - See **FPS_TEMPLATE_IMPLEMENTATION.md** for player character setup
    - See **SCENE_SETUP_GUIDE.md** for creating game levels
    - See **BLUEPRINT_QUICKSTART.md** for creating Blueprints and UI
    - See **ASSET_GUIDELINES.md** for asset creation standards
-   
-   **Content Creation**:
-   - Import/create meshes for ship modules
-   - Design UI widgets for interface system
-   - Create materials and textures
 
 ## Development Roadmap
 
@@ -320,8 +325,9 @@ Comprehensive documentation is available in the `/Docs` folder:
 
 ### Getting Started
 - **SETUP.md** - Installation and initial project setup
+- **ADDING_FPS_TEMPLATE.md** - How to add Epic's official FPS Template to the project (recommended)
 - **PYTHON_AUTOMATION_GUIDE.md** - Automate setup with Python scripts (fastest method)
-- **FPS_TEMPLATE_IMPLEMENTATION.md** - Detailed guide for implementing the First Person template
+- **FPS_TEMPLATE_IMPLEMENTATION.md** - Detailed guide for implementing the First Person template manually
 - **SCENE_SETUP_GUIDE.md** - Complete guide for creating and modifying game scenes/levels
 
 ### Development

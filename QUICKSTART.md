@@ -2,7 +2,19 @@
 
 ## 🚀 Fastest Way to Get Started (10 minutes)
 
-This is the quickest path to get Astro Engineer's FPS template up and running.
+This guide provides the quickest path to get Astro Engineer's FPS gameplay up and running.
+
+**Two Options Available:**
+
+1. **Option A: Use Epic's Built-in FPS Template** (Recommended for Beginners)
+   - Adds complete FPS content pack with meshes, animations, and Blueprints
+   - Takes 5-10 minutes to add to project
+   - See **[Docs/ADDING_FPS_TEMPLATE.md](Docs/ADDING_FPS_TEMPLATE.md)** for step-by-step instructions
+
+2. **Option B: Manual Python Automation** (For Custom Implementation)
+   - Creates custom FPS setup from our C++ classes
+   - Uses Python scripts for automation
+   - Continue with steps below
 
 ### Step 0: Initial Setup (5 minutes) - **IMPORTANT: DO THIS FIRST!**
 
