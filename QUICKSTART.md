@@ -139,6 +139,28 @@ If you prefer manual setup or Python doesn't work:
 
 ## ❓ Common Issues
 
+### Build Errors
+
+#### "AstroEngineerEditor modifies the values of properties" Error
+- **Cause**: Outdated build settings (this has been fixed in the latest version)
+- **Solution**: 
+  1. Pull the latest changes from GitHub
+  2. Regenerate Visual Studio project files (Step 0.2)
+  3. Clean and rebuild in Visual Studio
+- See `Docs/SETUP.md` for detailed troubleshooting
+
+#### "Using backward-compatible build settings" Warning
+- **Cause**: Project was using BuildSettingsVersion.V5 (this has been fixed)
+- **Solution**: Pull latest changes - project now uses V6
+- This warning should not appear in the current version
+
+#### No .sln (solution) file exists
+- **Cause**: Project files need to be generated first
+- **Solution**: Follow Step 0.2 above to generate Visual Studio project files
+- You must generate the .sln file before you can compile the C++ code
+
+### Runtime Issues
+
 ### "Python plugin not found"
 - Verify you're using UE 5.7+
 - Check Plugins window for availability
