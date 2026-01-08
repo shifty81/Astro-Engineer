@@ -1,5 +1,9 @@
 # Astro Engineer - Unreal Engine 5.7 Space Exploration Game
 
+## 🚀 Quick Start
+
+**New to the project?** See **[QUICKSTART.md](QUICKSTART.md)** to set up the FPS template in under 5 minutes using Python automation!
+
 ## Overview
 
 Astro Engineer is a first-person space exploration and ship-building game built in Unreal Engine 5.7. Players start on foot, gather resources, craft items, research technologies, and ultimately build their own modular spaceships to explore the solar system.
